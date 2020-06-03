@@ -7,13 +7,30 @@
     <title>Document</title>
 </head>
 <body>
-    <section class="section-first">
+    <section class="full-page-section first">
+        <div class="canvas-options right-top-absolute">
+            <div class="speedX">
+                <label for="speedX">Speed of animation X</label>
+                <input type="range" id="speedX" name="speedX" min="1000" max="10000" />
+            </div>
+            <div class="speedY">
+                <label for="speedY">Speed of animation Y</label>
+                <input type="range" id="speedY" name="speedY" min="1000" max="10000" />
+            </div>
+            <div class="number-of-dots">
+                <label for="nrDots">Number of dots</label>
+                <input id="nrDots" type="text" value="1000" />
+            </div>
+        </div>
         <div class="canvas">
             <canvas id="canvas"></canvas>
         </div>
         <div class="center-absolute title">
-            <h1>Hello, my name is Maciej Malewicz</h1>
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
         </div>
+    </section>
+    <section class="full-page-section second">
+        <h1>SECTION SECOND</h1>
     </section>
 
     <script src="index.js"></script>

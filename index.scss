@@ -7,19 +7,29 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
-.section-first{
+.full-page-section{
     height: 100vh; 
-    width: 100vw; 
+    width: 100%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #252934;
+
+    &.first{
+        background-color: #252934;
+    }
+
+    &.second{
+        h1{
+            font-size: 3.5em;
+        }
+    }
+    
 }
 
 #canvas { 
     height: 100vh; 
-    width: 100vw; 
+    width: 100%; 
     display: block;
 }
 .center-absolute{
@@ -30,4 +40,17 @@ body{
         font-size: 3rem;
         color:#fefefe;
     }
+}
+.right-top-absolute{
+    height:100px;
+    border: 1px solid white;
+    padding: 10px;
+    position: absolute;
+    right:0;
+    top:6vw;
+    background-color: #252934;
+    color:#fefefe;
+}
+#speedX, #speedY{
+    transform: rotate(180deg );
 }
