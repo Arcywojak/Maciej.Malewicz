@@ -1,7 +1,10 @@
+/****************** FIRST SECTION ANIMATION ***********************/
+
 const canvas = document.getElementById("canvas"),
       speedInputX = document.getElementById("speedX"),
       speedInputY = document.getElementById("speedY"),
-      numberOfDots = document.getElementById("nrDots"),     
+      numberOfDots = document.getElementById("nrDots"),
+      dotsRadius = document.getElementById("radius")    
       deviceWidth = window.innerWidth,
       deviceHeight = window.innerHeight;
       middleX = deviceWidth/2,
@@ -9,6 +12,8 @@ const canvas = document.getElementById("canvas"),
       ctx = canvas.getContext("2d");
 
 const resizeCanvas = () => {
+    console.log(deviceWidth, deviceHeight, "CHANGED")
+
     canvas.width = deviceWidth;
     canvas.height = deviceHeight;
 }
@@ -41,7 +46,9 @@ const generateRandomDots = (radius) => {
 
 const draw = () => {
 
-    let arrayOfDots = generateRandomDots(1)
+    let radiusOfDots = dotsRadius.value;
+
+    let arrayOfDots = generateRandomDots(radiusOfDots)
 
     let counter = 1;
 
@@ -51,7 +58,13 @@ const draw = () => {
          !isNaN(Number(numberOfDots.value) ) 
          && Number(numberOfDots.value) > 0){
            
-            arrayOfDots = generateRandomDots(1);
+            arrayOfDots = generateRandomDots(radiusOfDots);
+        }
+
+        if(radiusOfDots !== dotsRadius.value){
+            radiusOfDots = dotsRadius.value;
+
+            arrayOfDots = generateRandomDots(radiusOfDots)
         }
        
         ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -94,8 +107,6 @@ const draw = () => {
 
 }
 
-
-
 resizeCanvas();
 draw();
 
@@ -104,5 +115,6 @@ document.addEventListener("resize", () => {
     draw();
 })
 
+/******************END OF FIRST SECTION ANIMATION ***********************/
 
 

@@ -4,33 +4,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <title>Document</title>
+    <title>Maciej Malewicz</title>
 </head>
 <body>
     <section class="full-page-section first">
         <div class="canvas-options right-top-absolute">
-            <div class="speedX">
+            <div class="speedX input-wrapper">
                 <label for="speedX">Speed of animation X</label>
-                <input type="range" id="speedX" name="speedX" min="1000" max="10000" />
+                <input type="range" id="speedX" name="speedX" min="1000" max="8000" />
             </div>
-            <div class="speedY">
+            <div class="speedY input-wrapper">
                 <label for="speedY">Speed of animation Y</label>
-                <input type="range" id="speedY" name="speedY" min="1000" max="10000" />
+                <input type="range" id="speedY" name="speedY" min="1000" max="8000" />
             </div>
-            <div class="number-of-dots">
+            <div class="dots-radius input-wrapper">
+                <label for="radius">Radius of dots</label>
+                <input type="range" id="radius" name="radius" min="1" max="10" value="1"/>
+            </div>
+            <div class="number-of-dots input-wrapper">
                 <label for="nrDots">Number of dots</label>
-                <input id="nrDots" type="text" value="1000" />
+                <input id="nrDots" type="number" value="1000" maxlength="5"/>
             </div>
+            
         </div>
-        <div class="canvas">
-            <canvas id="canvas"></canvas>
+        <div class="canvas" >
+            <canvas id="canvas" width="1900" height="950"></canvas>
         </div>
         <div class="center-absolute title">
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+            <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+            <h2>adipisicing elit</h2>
         </div>
     </section>
     <section class="full-page-section second">
-        <h1>SECTION SECOND</h1>
+        <div class="second-section-inner">
+            <div class="image-and-description">
+                <div class="image">
+                    <img src="./images/NoImg.png" alt="me">
+                </div>
+                <div class="desription">
+                    <h1>About me</h1>
+                    <div class="line"></div>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the industry's
+                        standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and scrambled it to make a
+                    </p>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="technologies-block">
+                <h2>Technologies and tools that I usually use:</h2>
+                <div class="list-of-technologies">
+                    <div class="technology">
+                        <img src="./images/html5.svg" alt="html">
+                    </div>
+                    <div class="technology">
+                        <img src="./images/css.svg" alt="css">
+                    </div>
+                    <div class="technology">
+                        <img src="./images/js.png" alt="js">
+                    </div>
+                    <div class="technology">
+                        <img src="./images/react.svg" alt="react">
+                    </div>
+                    <div class="technology">
+                        <img src="./images/sass.svg" alt="sass">
+                    </div>
+                    <div class="technology">
+                        <img src="./images/figma.svg" alt="figma">
+                    </div>
+                    <div class="technology">
+                        <img src="./images/nodeJS.svg" alt="node">
+                    </div>
+                    <div class="technology">
+                        <img src="./images/npm.svg" alt="npm">
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+        </div>
+    </section>
+    <section class="full-page-section third">
+        <h1>My recent projects</h1>
+        <div class="project-list">   
+            <div class="project">
+                <div class="project-inner">
+                    <img src="./images/projectPattern.svg" alt="project">
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-inner">
+                    <div class="inside-image h3">SOME TITLE sad asd</div>
+                    <img class="inside-image img" src="images/aProject.svg" alt="project" />
+                    <img src="./images/projectPattern.svg" alt="project">
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-inner">
+                    <img src="./images/projectPattern.svg" alt="project">
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-inner">
+                    <img src="./images/projectPattern.svg" alt="project">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="full-page-section fourth">
+        <h1>Have a question?</h1>
+        <h2>Enquire below</h2>
+        <form action="" class="contact-form">
+            <div class="contact-inputs-wrapper">
+                <div class="contact-input-block">
+                    <label class="label" for="name" >Name</label>
+                    <input id="name" type="text" required>
+                </div>
+                <div class="contact-input-block">
+                    <label class="label" for="email" >Email</label>
+                    <input id="email" type="email" required>
+                </div>
+            </div>
+            <div class="contact-textarea">
+                <label class="label" for="email">Message</label>
+                <textarea name="" id="" cols="30" rows="12" required></textarea>
+            </div>
+
+         <button class="submit-btn">Submit</button>    
+        </form>
+        <p>Or contact me directly by email: <i>test@mail.pl</i></p>
     </section>
 
     <script src="index.js"></script>
