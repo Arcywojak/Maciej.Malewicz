@@ -12,8 +12,6 @@ const canvas = document.getElementById("canvas"),
       ctx = canvas.getContext("2d");
 
 const resizeCanvas = () => {
-    console.log(deviceWidth, deviceHeight, "CHANGED")
-
     canvas.width = deviceWidth;
     canvas.height = deviceHeight;
 }
@@ -110,11 +108,34 @@ const draw = () => {
 resizeCanvas();
 draw();
 
+
 document.addEventListener("resize", () => {
     resizeCanvas();
     draw();
 })
 
 /******************END OF FIRST SECTION ANIMATION ***********************/
+
+/** HIDE/SHOW FIRST SECTION */
+
+toggleCanvasOptions = (show) => {
+    const canvasOptions = document.querySelector(".canvas-options");
+
+    if(show){
+        canvasOptions.classList.remove("hidden-right");
+    } else {
+        canvasOptions.classList.add("hidden-right");
+    }
+}
+
+const activateCanvasOptions = document.querySelector(".activate-canvas-options");
+
+activateCanvasOptions.addEventListener("click", () => {toggleCanvasOptions(true);})
+
+const hideOptions = document.querySelector(".hide-options");
+
+hideOptions.addEventListener("click", () => {toggleCanvasOptions(false);})
+
+/**END OF HIDE/SHOW FIRST SECTION */
 
 

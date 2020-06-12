@@ -8,7 +8,13 @@
 </head>
 <body>
     <section class="full-page-section first">
-        <div class="canvas-options right-top-absolute">
+        <div class="activate-canvas-options right-top-absolute">
+            <div class="arrow"><img src="./images/arrow.svg" alt="arrow"></div>
+            fiddle with animation
+        </div>
+        <div class="canvas-options right-top-absolute hidden-right">
+            <div class="hide-options">hide</div>
+
             <div class="speedX input-wrapper">
                 <label for="speedX">Speed of animation X</label>
                 <input type="range" id="speedX" name="speedX" min="1000" max="8000" />
@@ -23,7 +29,7 @@
             </div>
             <div class="number-of-dots input-wrapper">
                 <label for="nrDots">Number of dots</label>
-                <input id="nrDots" type="number" value="1000" maxlength="5"/>
+                <input id="nrDots" type="number" value="1000" min="0" max="10000"/>
             </div>
             
         </div>
@@ -31,11 +37,26 @@
             <canvas id="canvas" width="1900" height="950"></canvas>
         </div>
         <div class="center-absolute title">
-            <h1>Lorem ipsum dolor sit amet consectetur.</h1>
-            <h2>adipisicing elit</h2>
+            <h1>
+                <span class="word-fade-in delay-1">Lorem</span>
+                <span class="word-fade-in delay-2">ipsum</span>
+                <span class="word-fade-in delay-3">dolor</span>
+                <span class="word-fade-in delay-4">sit</span>
+                <span class="word-fade-in delay-5">amet</span>
+                <span class="word-fade-in delay-6">consectetur.</span>
+            </h1>
+            <h2 class="word-fade-in delay-7">adipisicing elit</h2>
+
+            <a href="#second">
+                <div class="word-fade-in delay-8 carry-on">
+                    <h3>Carry on</h3>   
+                    <img class="floating-arrows" src="./images/doubleArrow.png" alt="arrows">
+                </div>
+            </a>
+            
         </div>
     </section>
-    <section class="full-page-section second">
+    <section class="full-page-section second" id="second">
         <div class="second-section-inner">
             <div class="image-and-description">
                 <div class="image">
@@ -79,6 +100,9 @@
                     </div>
                     <div class="technology">
                         <img src="./images/npm.svg" alt="npm">
+                    </div>
+                    <div class="technology">
+                        <img src="./images/git.png" alt="npm">
                     </div>
                 </div>
             </div>
@@ -135,6 +159,20 @@
         </form>
         <p>Or contact me directly by email: <i>test@mail.pl</i></p>
     </section>
+    <footer class="footer">
+        <div class="icons">
+            <a href="#" class="icon">
+                <img src="./images/facebook.png" alt="facebook">
+            </a>
+            <a href="#" class="icon">
+                <img src="./images/github.png" alt="github">
+            </a>
+            <a href="#" class="icon">
+                <img src="./images/linkedin.png" alt="linkedin">
+            </a>
+        </div>
+        <p>Portfolio made by me ©</p>
+    </footer>
 
     <script src="index.js"></script>
 </body>
