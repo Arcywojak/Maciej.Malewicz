@@ -147,31 +147,48 @@ hideOptions.addEventListener("click", () => {toggleCanvasOptions(false);})
 
 /*SHOW INFO ABOUT PROJECT */
 
+const toggleProjectInfo = (e) => {
+
+    const aboutProjectInfo = document.querySelectorAll(".about-project");
+
+    switch(e.target.id){
+        case "qm0":
+            aboutProjectInfo[0].classList.toggle("hidden-left"); 
+            break;
+        case "qm1":
+            aboutProjectInfo[1].classList.toggle("hidden-left"); 
+            break;
+        case "qm2":
+            aboutProjectInfo[2].classList.toggle("hidden-left"); 
+            break;
+        case "qm3":
+            aboutProjectInfo[3].classList.toggle("hidden-left"); 
+            break;
+    }  
+}
+
 const questionMarks = document.querySelectorAll(".question-mark");
 
 questionMarks.forEach(qm => {
 
-    const aboutProjectInfo = document.querySelectorAll(".about-project");
-    console.log(aboutProjectInfo)
-
     qm.addEventListener("click", (e) => {
         
-    switch(e.target.id){
-        case "qm0":
-            aboutProjectInfo[0].classList.remove("hidden-left"); 
-            break;
-        case "qm1":
-            aboutProjectInfo[1].classList.remove("hidden-left"); 
-            break;
-        case "qm2":
-            aboutProjectInfo[2].classList.remove("hidden-left"); 
-            break;
-        case "qm3":
-            aboutProjectInfo[3].classList.remove("hidden-left"); 
-            break;
-    }    
+      toggleProjectInfo(e);
     
     })
+})
+
+const aboutProjectExit = document.querySelectorAll(".about-project-exit");
+console.log(aboutProjectExit)
+
+aboutProjectExit.forEach(abe => {
+
+    abe.addEventListener("click", (e) => {
+        
+        toggleProjectInfo(e);
+      
+      })
+
 })
 
 

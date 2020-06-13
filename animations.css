@@ -38,6 +38,11 @@
           animation-delay: 1.5s;
 }
 
+.delay-12 {
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
+}
+
 @-webkit-keyframes showActivateCanvasOptions {
   from {
     opacity: 0;

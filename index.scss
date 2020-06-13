@@ -45,7 +45,7 @@ html{
     }
 
     &.second{
-       background-image: url("./images/background.png");
+       background-image: url("./images/otherIcons/background.png");
        background-repeat: no-repeat;
        background-size: cover;
         h1{
@@ -329,14 +329,23 @@ html{
     }
 
     &.about-project{
-        background-color: red;
+        background-color: black;
+        color:#fefefe;
         z-index: 2;
         width: 83.6%;
         transition: transform .3s ease-in;
+        overflow: auto;
+        padding: 6px 12px;
+
+        a{
+            color:green;
+        }
 
         &.hidden-left{
             transform: translateY(calc(100% + 45px));
         }
+
+        
     }
 
     &-wrapper{
@@ -366,6 +375,11 @@ html{
     }
 
     
+}
+.about-project-exit{
+    text-decoration: underline;
+    font-size: 18px;
+    cursor: pointer;
 }
 .contact-form{
     width: 100%;
@@ -403,6 +417,7 @@ html{
 
     textarea{
         width:100%;
+        resize: vertical;
     }
 }
 .contact-input-block input, .contact-textarea textarea, .submit-btn{
