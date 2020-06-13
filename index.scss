@@ -2,6 +2,12 @@
 
 $primaryGray:#252934;
 
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 *,*::before,*::after{
     box-sizing: border-box;
 }
@@ -20,9 +26,7 @@ html{
     min-height: 100vh; 
     width: 100%;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCenter;
     overflow: hidden;
 
     
@@ -30,8 +34,13 @@ html{
     &.first{
         background-color: $primaryGray;
         h1{
-            font-size: 3.5em;
+            font-size: 3.8em;
             -webkit-text-stroke: 2px black;
+        }
+        h2{
+            -webkit-text-stroke: .5px black;
+            font-size: 2.5em;
+            font-weight: 500;
         }
     }
 
@@ -60,6 +69,9 @@ html{
         h1{
             font-size: 3.5em;
             margin-bottom: 0;
+        }
+        h2{
+            font-weight: 400;
         }
     }
     
@@ -149,8 +161,14 @@ html{
     opacity: 0;
     animation-name: goRight;
     animation-iteration-count: infinite;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-delay: 2s;
+    animation-direction: alternate;
+}
+
+.hide-options{
+    cursor: pointer;
+    width: 25px;
 }
 
 #speedX, #speedY{
@@ -265,12 +283,16 @@ html{
 }
 .project{  
     margin: 0 auto;
-
+    overflow: hidden;
     &-inner{
         width: 100%;
         padding: 0 25px;
         max-width: 540px;
         position: relative;
+
+        &:hover .info{
+            opacity: 1;
+        }
     }
     img{
         width: 100%;
@@ -278,10 +300,11 @@ html{
 }
 .inside-image{
     position: absolute;
+    
 
-    &.img{
+    &.img, &.info, &.about-project{
         height:85%;
-        width:91.7%;
+        width:82%;
         left:0;
         right:0;
         bottom:4.4444444%;
@@ -294,6 +317,55 @@ html{
         font-size: 16px;
         color:#adadad;
     }
+
+    &.info{
+        @include flexCenter;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 2;
+        width: 82%;
+
+        opacity: 0;
+        transition: opacity .3s ease-in;
+    }
+
+    &.about-project{
+        background-color: red;
+        z-index: 2;
+        width: 83.6%;
+        transition: transform .3s ease-in;
+
+        &.hidden-left{
+            transform: translateY(calc(100% + 45px));
+        }
+    }
+
+    &-wrapper{
+        @include flexCenter;
+        justify-content: space-evenly;
+        width: 100%;
+        
+        .img{
+            @include flexCenter;
+            background-color: lightgray;
+            border:1px solid black;
+            border-radius: 50%;
+            padding:10px;
+            cursor: pointer;
+
+            &:hover{
+                background-color: lighten(lightgray,10%);
+            }
+
+            img{
+                width:35px;
+                height:35px;
+            }
+        }
+
+       
+    }
+
+    
 }
 .contact-form{
     width: 100%;
@@ -340,6 +412,10 @@ html{
     color:#fefefe;
     font-size: 16px;
     padding: 6px 10px;
+
+    &:hover, &:focus{
+        background-color: lighten($primaryGray, 3%);
+    }
 }
 .submit-btn{
     height:45px;
@@ -348,10 +424,12 @@ html{
     font-size: 20px;
     cursor: pointer;
     margin-top: 20px;
+
+    
 }
 .footer{
     background-color: $primaryGray;
-    padding-bottom: 25px;
+    padding: 25px 0;
 
     p{
         color:#fefefe;
@@ -364,7 +442,7 @@ html{
 .icons{
     display: flex;
     justify-content: space-evenly;
-    max-width: 500px;
+    width: 250px;
     margin: 0 auto;
 }
 .icon{

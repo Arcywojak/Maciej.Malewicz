@@ -1,3 +1,10 @@
+// PREVENT SCROLLING DURING RELOAD
+if(window.location.hash){
+    window.location.hash = ""
+}
+/////////////////////////////////
+
+
 /****************** FIRST SECTION ANIMATION ***********************/
 
 const canvas = document.getElementById("canvas"),
@@ -137,5 +144,34 @@ const hideOptions = document.querySelector(".hide-options");
 hideOptions.addEventListener("click", () => {toggleCanvasOptions(false);})
 
 /**END OF HIDE/SHOW FIRST SECTION */
+
+/*SHOW INFO ABOUT PROJECT */
+
+const questionMarks = document.querySelectorAll(".question-mark");
+
+questionMarks.forEach(qm => {
+
+    const aboutProjectInfo = document.querySelectorAll(".about-project");
+    console.log(aboutProjectInfo)
+
+    qm.addEventListener("click", (e) => {
+        
+    switch(e.target.id){
+        case "qm0":
+            aboutProjectInfo[0].classList.remove("hidden-left"); 
+            break;
+        case "qm1":
+            aboutProjectInfo[1].classList.remove("hidden-left"); 
+            break;
+        case "qm2":
+            aboutProjectInfo[2].classList.remove("hidden-left"); 
+            break;
+        case "qm3":
+            aboutProjectInfo[3].classList.remove("hidden-left"); 
+            break;
+    }    
+    
+    })
+})
 
 

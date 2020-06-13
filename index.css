@@ -178,12 +178,12 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
 }
 
@@ -192,8 +192,14 @@ html {
 }
 
 .full-page-section.first h1 {
-  font-size: 3.5em;
+  font-size: 3.8em;
   -webkit-text-stroke: 2px black;
+}
+
+.full-page-section.first h2 {
+  -webkit-text-stroke: .5px black;
+  font-size: 2.5em;
+  font-weight: 500;
 }
 
 .full-page-section.second {
@@ -232,6 +238,10 @@ html {
 .full-page-section.fourth h1 {
   font-size: 3.5em;
   margin-bottom: 0;
+}
+
+.full-page-section.fourth h2 {
+  font-weight: 400;
 }
 
 #canvas {
@@ -335,10 +345,17 @@ html {
           animation-name: goRight;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.hide-options {
+  cursor: pointer;
+  width: 25px;
 }
 
 #speedX, #speedY {
@@ -473,6 +490,7 @@ html {
 
 .project {
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .project-inner {
@@ -480,6 +498,10 @@ html {
   padding: 0 25px;
   max-width: 540px;
   position: relative;
+}
+
+.project-inner:hover .info {
+  opacity: 1;
 }
 
 .project img {
@@ -490,9 +512,9 @@ html {
   position: absolute;
 }
 
-.inside-image.img {
+.inside-image.img, .inside-image.info, .inside-image.about-project {
   height: 85%;
-  width: 91.7%;
+  width: 82%;
   left: 0;
   right: 0;
   bottom: 4.4444444%;
@@ -505,6 +527,81 @@ html {
   right: 8%;
   font-size: 16px;
   color: #adadad;
+}
+
+.inside-image.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  width: 82%;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-in;
+  transition: opacity .3s ease-in;
+}
+
+.inside-image.about-project {
+  background-color: red;
+  z-index: 2;
+  width: 83.6%;
+  -webkit-transition: -webkit-transform .3s ease-in;
+  transition: -webkit-transform .3s ease-in;
+  transition: transform .3s ease-in;
+  transition: transform .3s ease-in, -webkit-transform .3s ease-in;
+}
+
+.inside-image.about-project.hidden-left {
+  -webkit-transform: translateY(calc(100% + 45px));
+          transform: translateY(calc(100% + 45px));
+}
+
+.inside-image-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+}
+
+.inside-image-wrapper .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: lightgray;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.inside-image-wrapper .img:hover {
+  background-color: #ededed;
+}
+
+.inside-image-wrapper .img img {
+  width: 35px;
+  height: 35px;
 }
 
 .contact-form {
@@ -561,6 +658,10 @@ html {
   padding: 6px 10px;
 }
 
+.contact-input-block input:hover, .contact-input-block input:focus, .contact-textarea textarea:hover, .contact-textarea textarea:focus, .submit-btn:hover, .submit-btn:focus {
+  background-color: #2b303d;
+}
+
 .submit-btn {
   height: 45px;
   width: 150px;
@@ -572,7 +673,7 @@ html {
 
 .footer {
   background-color: #252934;
-  padding-bottom: 25px;
+  padding: 25px 0;
 }
 
 .footer p {
@@ -590,7 +691,7 @@ html {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  max-width: 500px;
+  width: 250px;
   margin: 0 auto;
 }
 

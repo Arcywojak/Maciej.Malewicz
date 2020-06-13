@@ -9,11 +9,11 @@
 <body>
     <section class="full-page-section first">
         <div class="activate-canvas-options right-top-absolute">
-            <div class="arrow"><img src="./images/arrow.svg" alt="arrow"></div>
+            <div class="arrow"><img src="./images/otherIcons/arrow.svg" alt="arrow"></div>
             fiddle with animation
         </div>
         <div class="canvas-options right-top-absolute hidden-right">
-            <div class="hide-options">hide</div>
+            <img class="hide-options" src="./images/otherIcons/exit.png" alt="hide">
 
             <div class="speedX input-wrapper">
                 <label for="speedX">Speed of animation X</label>
@@ -25,11 +25,11 @@
             </div>
             <div class="dots-radius input-wrapper">
                 <label for="radius">Radius of dots</label>
-                <input type="range" id="radius" name="radius" min="1" max="10" value="1"/>
+                <input type="range" id="radius" name="radius" step="0.5" min="0.5" max="10.5" value="1"/>
             </div>
             <div class="number-of-dots input-wrapper">
                 <label for="nrDots">Number of dots</label>
-                <input id="nrDots" type="number" value="1000" min="0" max="10000"/>
+                <input id="nrDots" type="range" value="1000" min="1" max="10000"/>
             </div>
             
         </div>
@@ -38,19 +38,19 @@
         </div>
         <div class="center-absolute title">
             <h1>
-                <span class="word-fade-in delay-1">Lorem</span>
-                <span class="word-fade-in delay-2">ipsum</span>
-                <span class="word-fade-in delay-3">dolor</span>
-                <span class="word-fade-in delay-4">sit</span>
-                <span class="word-fade-in delay-5">amet</span>
-                <span class="word-fade-in delay-6">consectetur.</span>
+                <span class="word-fade-in delay-1">Hello, </span>
+                <span class="word-fade-in delay-2">my</span>
+                <span class="word-fade-in delay-3">name</span>
+                <span class="word-fade-in delay-4">is</span>
+                <span class="word-fade-in delay-5">Maciej</span>
+                <span class="word-fade-in delay-6">Malewicz.</span>
             </h1>
-            <h2 class="word-fade-in delay-7">adipisicing elit</h2>
+            <h2 class="word-fade-in delay-7">And this is my portfolio</h2>
 
             <a href="#second">
                 <div class="word-fade-in delay-8 carry-on">
                     <h3>Carry on</h3>   
-                    <img class="floating-arrows" src="./images/doubleArrow.png" alt="arrows">
+                    <img class="floating-arrows" src="./images/otherIcons/doubleArrow.png" alt="arrows">
                 </div>
             </a>
             
@@ -78,101 +78,211 @@
                 <h2>Technologies and tools that I usually use:</h2>
                 <div class="list-of-technologies">
                     <div class="technology">
-                        <img src="./images/html5.svg" alt="html">
+                        <img src="./images/techIcons/html5.svg" alt="html">
                     </div>
                     <div class="technology">
-                        <img src="./images/css.svg" alt="css">
+                        <img src="./images/techIcons/css.svg" alt="css">
                     </div>
                     <div class="technology">
-                        <img src="./images/js.png" alt="js">
+                        <img src="./images/techIcons/js.png" alt="js">
                     </div>
                     <div class="technology">
-                        <img src="./images/react.svg" alt="react">
+                        <img src="./images/techIcons/react.svg" alt="react">
                     </div>
                     <div class="technology">
-                        <img src="./images/sass.svg" alt="sass">
+                        <img src="./images/techIcons/sass.svg" alt="sass">
                     </div>
                     <div class="technology">
-                        <img src="./images/figma.svg" alt="figma">
+                        <img src="./images/techIcons/figma.svg" alt="figma">
                     </div>
                     <div class="technology">
-                        <img src="./images/nodeJS.svg" alt="node">
+                        <img src="./images/techIcons/nodeJS.svg" alt="node">
                     </div>
                     <div class="technology">
-                        <img src="./images/npm.svg" alt="npm">
+                        <img src="./images/techIcons/npm.svg" alt="npm">
                     </div>
                     <div class="technology">
-                        <img src="./images/git.png" alt="npm">
+                        <img src="./images/techIcons/git.png" alt="npm">
                     </div>
                 </div>
             </div>
             <div class="line"></div>
         </div>
     </section>
-    <section class="full-page-section third">
+    <section class="full-page-section third" id="third">
         <h1>My recent projects</h1>
-        <div class="project-list">   
+        <div class="project-list"> 
+
             <div class="project">
                 <div class="project-inner">
+                    <div class="inside-image info">
+                        <div class="inside-image-wrapper">
+
+                            <a href="https://almost-social-network.herokuapp.com/welcome" target="_blank">
+                                <div class="img">
+                                    <img src="./images/otherIcons/www.png" alt="www">
+                                </div>
+                            </a>
+                            <div class="img question-mark" id="qm0">
+                                <img src="./images/otherIcons/questionMark.png" alt="info" id="qm0">
+                            </div>
+                            <a href="https://github.com/Arcywojak/social-network" target="_blank">
+                                <div class="img show-about-project">
+                                    <img src="./images/otherIcons/github.png" alt="github">
+                                </div>  
+                            </a>
+                        </div>
+                    </div>
+                    <div class="inside-image about-project hidden-left">
+
+                    </div>
+
+                    <div class="inside-image h3">
+                        social media
+                    </div>
+
+                    <img class="inside-image img" src="images/projectImages/sm.png" alt="project" />
                     <img src="./images/projectPattern.svg" alt="project">
                 </div>
             </div>
+
             <div class="project">
                 <div class="project-inner">
-                    <div class="inside-image h3">SOME TITLE sad asd</div>
-                    <img class="inside-image img" src="images/aProject.svg" alt="project" />
+                    <div class="inside-image info">
+                        <div class="inside-image-wrapper">
+                            <a href="https://500plus.netlify.app/" target="_blank">
+                                <div class="img">
+                                    <img src="./images/otherIcons/www.png" alt="www">
+                                </div>
+                            </a>
+                            <div class="img question-mark" id="qm1">
+                                <img src="./images/otherIcons/questionMark.png" alt="info" id="qm1">
+                            </div>
+                            <a href="https://almost-social-network.herokuapp.com/welcome" target="_blank">
+                                <div class="img show-about-project">
+                                    <img src="./images/otherIcons/github.png" alt="github">
+                                </div>  
+                            </a>
+                        </div>
+                    </div>
+                    <div class="inside-image about-project hidden-left">
+
+                    </div>
+
+                    <div class="inside-image h3">
+                        coZa500Plus
+                    </div>
+
+                    <img class="inside-image img" src="images/projectImages/500plus.png" alt="project" />
                     <img src="./images/projectPattern.svg" alt="project">
                 </div>
             </div>
+
             <div class="project">
                 <div class="project-inner">
+                    <div class="inside-image info">
+                        <div class="inside-image-wrapper">
+                            <a href="https://my-chesss.netlify.app/" target="_blank">
+                                <div class="img">
+                                    <img src="./images/otherIcons/www.png" alt="www">
+                                </div>
+                            </a>
+                            <div class="img question-mark" id="qm2">
+                                <img src="./images/otherIcons/questionMark.png" alt="info" id="qm2">
+                            </div>
+                            <a href="https://github.com/Arcywojak/Chess" target="_blank">
+                            <div class="img show-about-project">
+                                <img src="./images/otherIcons/github.png" alt="github">
+                            </div>  
+                            </a>
+                        </div>
+                    </div>
+                    <div class="inside-image about-project hidden-left">
+
+                    </div>
+
+                    <div class="inside-image h3">
+                        Chess
+                    </div>
+
+                    <img class="inside-image img" src="images/projectImages/chess.png" alt="project" />
                     <img src="./images/projectPattern.svg" alt="project">
                 </div>
             </div>
+
             <div class="project">
                 <div class="project-inner">
+                    <div class="inside-image info">
+                        <div class="inside-image-wrapper">
+                            <a href="#" target="_blank">
+                                <div class="img">
+                                    <img src="./images/otherIcons/www.png" alt="www">
+                                </div>
+                            </a>
+                            <div class="img question-mark" id="qm3">
+                                <img src="./images/otherIcons/questionMark.png" alt="info" id="qm3">
+                            </div>
+                            <a href="https://github.com/Arcywojak/Maciej.Malewicz" target="_blank">
+                                <div class="img show-about-project">
+                                    <img src="./images/otherIcons/github.png" alt="github">
+                                </div>  
+                            </a>
+                        </div>
+                    </div>
+                    <div class="inside-image about-project hidden-left">
+
+                    </div>
+
+                    <div class="inside-image h3">
+                        The Portfolio
+                    </div>
+
+                    <img class="inside-image img" src="images/projectImages/portfolio.png" alt="project" />
                     <img src="./images/projectPattern.svg" alt="project">
                 </div>
             </div>
+
         </div>
     </section>
-    <section class="full-page-section fourth">
+    <section class="full-page-section fourth" id="fourth">
         <h1>Have a question?</h1>
         <h2>Enquire below</h2>
         <form action="" class="contact-form">
             <div class="contact-inputs-wrapper">
                 <div class="contact-input-block">
                     <label class="label" for="name" >Name</label>
-                    <input id="name" type="text" required>
+                    <input id="name" type="text" required >
                 </div>
                 <div class="contact-input-block">
                     <label class="label" for="email" >Email</label>
-                    <input id="email" type="email" required>
+                    <input id="email" type="email" required >
                 </div>
             </div>
             <div class="contact-textarea">
-                <label class="label" for="email">Message</label>
-                <textarea name="" id="" cols="30" rows="12" required></textarea>
+                <label class="label" id="email" for="textarea">Message</label>
+                <textarea name="textarea" id="textarea" cols="30" rows="12" required></textarea>
             </div>
 
          <button class="submit-btn">Submit</button>    
         </form>
         <p>Or contact me directly by email: <i>test@mail.pl</i></p>
+
+        <footer class="footer">
+            <div class="icons">
+                <a href="#" class="icon">
+                    <img src="./images/otherIcons/facebook.png" alt="facebook">
+                </a>
+                <a href="#" class="icon">
+                    <img src="./images/otherIcons/github.png" alt="github">
+                </a>
+                <a href="#" class="icon">
+                    <img src="./images/otherIcons/linkedin.png" alt="linkedin">
+                </a>
+            </div>
+            <p>Portfolio made by me ©</p>
+        </footer>
     </section>
-    <footer class="footer">
-        <div class="icons">
-            <a href="#" class="icon">
-                <img src="./images/facebook.png" alt="facebook">
-            </a>
-            <a href="#" class="icon">
-                <img src="./images/github.png" alt="github">
-            </a>
-            <a href="#" class="icon">
-                <img src="./images/linkedin.png" alt="linkedin">
-            </a>
-        </div>
-        <p>Portfolio made by me ©</p>
-    </footer>
+    
 
     <script src="index.js"></script>
 </body>
