@@ -179,7 +179,6 @@ questionMarks.forEach(qm => {
 })
 
 const aboutProjectExit = document.querySelectorAll(".about-project-exit");
-console.log(aboutProjectExit)
 
 aboutProjectExit.forEach(abe => {
 
