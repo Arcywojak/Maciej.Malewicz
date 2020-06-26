@@ -1,1 +1,1 @@
-IMAGE FROM https://iconscout.com
+IMAGES OF TECHNOLOGIES FROM https://iconscout.com
