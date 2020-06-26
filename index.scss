@@ -466,7 +466,9 @@ html{
 }
 .contact-inputs-wrapper{
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, calc(50% - 10px));
+    column-gap: 20px;
+
     input{
         width: 100%;
         height: 56px;
@@ -474,6 +476,7 @@ html{
 
     @media(max-width: 720px){
         grid-template-columns: 100%;
+        column-gap: 0;
     }
 }
 
