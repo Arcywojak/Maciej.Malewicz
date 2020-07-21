@@ -5,6 +5,7 @@ if(window.location.hash){
 /////////////////////////////////
 
 
+
 /****************** FIRST SECTION ANIMATION ***********************/
 
 const canvas = document.getElementById("canvas"),
@@ -17,6 +18,13 @@ const canvas = document.getElementById("canvas"),
       middleX = deviceWidth/2,
       middleY = deviceHeight/2,
       ctx = canvas.getContext("2d");
+
+      
+// SET VALUE OF DOTS RADIUS INPUT
+    if(deviceWidth < 400){
+        dotsRadius.value = 0.5 
+    }
+////////////////////////////////
 
 const resizeCanvas = () => {
     canvas.width = deviceWidth;

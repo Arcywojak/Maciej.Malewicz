@@ -82,8 +82,14 @@ html{
     @media(max-width: 720px){
         &.first{
             h1{
-                font-size: 50px;
+                font-size: 40px;
                 margin-bottom: 0;
+                padding: 0 8px;
+            }
+
+            h2{
+                margin-top: 0px;
+                font-size: 26px;
             }
         }
         &.fourth{
@@ -141,17 +147,18 @@ html{
     position: absolute;
     text-align: center;
     color:#fefefe;
+    @media(max-width: 400px){
+        
+     }
 
 }
 .title{
-    padding: 0 15px;
+   
     a{
         text-decoration: none;
         color:#fefefe;
     }
-    @media(max-width: 400px){
-       padding-top: 25px;
-    }
+    
 }
 .floating-arrows{
     animation-name: floatingArrows;
@@ -227,11 +234,6 @@ html{
     margin: 0;
 }
 
-#nrDots {
-    -moz-appearance:textfield; /* Firefox */
-    width:130px;
-    
-}
 
 }
 

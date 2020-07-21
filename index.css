@@ -254,8 +254,13 @@ html {
 
 @media (max-width: 720px) {
   .full-page-section.first h1 {
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 0;
+    padding: 0 8px;
+  }
+  .full-page-section.first h2 {
+    margin-top: 0px;
+    font-size: 26px;
   }
   .full-page-section.fourth {
     padding: 10px 20px;
@@ -303,19 +308,9 @@ html {
   color: #fefefe;
 }
 
-.title {
-  padding: 0 15px;
-}
-
 .title a {
   text-decoration: none;
   color: #fefefe;
-}
-
-@media (max-width: 400px) {
-  .title {
-    padding-top: 25px;
-  }
 }
 
 .floating-arrows {
@@ -404,12 +399,6 @@ html {
 .number-of-dots input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-.number-of-dots #nrDots {
-  -moz-appearance: textfield;
-  /* Firefox */
-  width: 130px;
 }
 
 .input-wrapper {
